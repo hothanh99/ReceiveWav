@@ -117,8 +117,8 @@ class WaveWrite:
     def Write(self,data):
         for i in range(0, 128):
             self.f.write(data[i])
-            self.writeCount += 1
-            if self.writeCount >= self.limitCount:
+        self.writeCount += 1
+        if self.writeCount >= self.limitCount:
                 self.f.close()   
                 self.Open()
     
